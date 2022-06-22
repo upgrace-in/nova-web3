@@ -38,7 +38,7 @@ export default function Home() {
         onLoad={() => console.log("WEB3Provider is Loaded...")}
       />
       <Script
-        src="/js/mint.js"
+        src="/js/main.js"
         strategy="lazyOnload"
         onLoad={() => console.log("main.js is Loaded...")}
       />
@@ -73,7 +73,7 @@ export default function Home() {
           <i className="fa-solid fa-star"></i>
           <p className="text-center">JOIN THE TEAM</p>
         </div>
-        <div className="connect_btn btn btn2">
+        <div id="connect_btn" className="connect_btn btn btn2">
           <p className="text-center">Connect Wallet</p>
         </div>
 
