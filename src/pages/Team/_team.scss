@@ -1,0 +1,65 @@
+.team {
+  position: relative;
+  min-height: 100vh;
+  background-color: var(--color-primary);
+  img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 75%;
+    height: 100%;
+    object-fit: cover;
+    // z-index: -1;
+  }
+
+  .content {
+    position: absolute;
+    left: 7.5rem;
+    right: 70vw;
+    top: 40%;
+    transform: translateY(-50%);
+    height: fit-content;
+    margin-top: 2rem;
+
+    h1 {
+      font-size: 8rem;
+      font-weight: 400;
+      line-height: 6rem;
+      margin-bottom: 5rem;
+    }
+
+    p {
+      font-family: $font-tertiary;
+      font-size: 1.3rem;
+      // margin-left: 5rem;
+    }
+  }
+
+  .name1 {
+    position: absolute;
+    top: 11rem;
+    right: 20%;
+  }
+  .name2 {
+    position: absolute;
+    top: 11rem;
+    right: 6%;
+  }
+  .name3 {
+    position: absolute;
+    bottom: 11rem;
+    left: 15%;
+  }
+}
+
+@include respond(phone) {
+  .team {
+    background-color: #000026;
+    img {
+      display: none;
+    }
+    .content {
+      right: 7.5rem;
+    }
+  }
+}

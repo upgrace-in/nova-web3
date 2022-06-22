@@ -1,0 +1,25 @@
+.input-color {
+  display: flex;
+  align-items: center;
+  input {
+    border-radius: 50%;
+    height: 5rem;
+    width: 5rem;
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+    margin-right: 2rem;
+    cursor: pointer;
+    transition: $transition-primary;
+  }
+
+  input::-webkit-color-swatch-wrapper {
+    padding: 0;
+  }
+  input::-webkit-color-swatch {
+    border: none;
+    border-radius: 50%;
+  }
+  label {
+  }
+}

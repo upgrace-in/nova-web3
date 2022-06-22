@@ -1,0 +1,122 @@
+.nfans {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  padding-top: 12rem;
+  padding-bottom: 7.5rem;
+
+  .left {
+    flex: 1;
+    padding: 0 7.5rem;
+
+    h1 {
+      font-size: 7.5rem;
+      font-weight: 400;
+      color: var(--color-primary);
+      line-height: 6rem;
+    }
+    h2 {
+      font-size: 4rem;
+      font-weight: 400;
+      color: var(--color-grey-light);
+      margin-bottom: 2rem;
+    }
+
+    .filter-container {
+      display: flex;
+      justify-content: space-between;
+      h3 {
+        font-size: 3rem;
+        font-weight: bold;
+        font-family: $font-secondary;
+        font-style: italic;
+      }
+
+      .list,
+      .list2 {
+        font-family: $font-tertiary;
+        p {
+          margin-bottom: 0.5rem;
+          cursor: pointer;
+        }
+
+        .item-active {
+          color: var(--color-primary);
+        }
+      }
+
+      .list {
+        p {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .right {
+    flex: 2;
+    padding: 0 7.5rem;
+
+    .filters {
+      display: flex;
+      margin-bottom: 2rem;
+
+      .filter {
+        display: flex;
+        align-items: center;
+        padding: 0.5rem 1rem;
+        background-color: rgba($color-grey-light, 0.5);
+        border-radius: 5px;
+
+        p {
+          margin-right: 1rem;
+        }
+
+        i {
+          font-size: 1.5rem;
+          cursor: pointer;
+        }
+
+        &:not(:last-child) {
+          margin-right: 2rem;
+        }
+      }
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-gap: 1rem;
+
+      .img {
+        cursor: pointer;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+}
+
+@include respond(phone) {
+  .nfans {
+    flex-direction: column;
+    .left {
+      margin-bottom: 5rem;
+      padding: 0 5rem;
+    }
+
+    .right {
+      padding: 0 5rem;
+
+      .gallery {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+}

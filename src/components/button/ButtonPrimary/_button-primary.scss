@@ -1,0 +1,26 @@
+.button-primary {
+  padding: 1rem 2rem;
+  background-color: var(--color-secondary);
+  border-radius: 10px;
+  border: none;
+  color: var(--color-light);
+  box-shadow: var(--shadow-light);
+  cursor: pointer;
+  border: 2px solid var(--color-secondary);
+  opacity: 1;
+  font-size: 1.2rem;
+  color: $color-light;
+  transition: background-color 0.3s;
+  width: fit-content;
+  transition: $transition-primary;
+  .icon-left {
+    margin-right: 1rem;
+  }
+  .icon-right {
+    margin-left: 1rem;
+  }
+
+  &:hover {
+    opacity: 0.75;
+  }
+}

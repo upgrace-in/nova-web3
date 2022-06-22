@@ -1,0 +1,16 @@
+.loader-secondary {
+  .spinner {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: 5px solid;
+    border-color: $color-light rgba($color-light, 0.1) rgba($color-light, 0.1);
+    animation: spinner 1s ease infinite;
+  }
+}
+
+.light {
+  .spinner {
+    border-color: $color-dark rgba($color-dark, 0.1) rgba($color-dark, 0.1);
+  }
+}

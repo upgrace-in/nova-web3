@@ -1,0 +1,269 @@
+.roadmap {
+  min-height: 100vh;
+  padding-top: 10rem;
+  padding-bottom: 7.5rem;
+  overflow-x: hidden;
+
+  .top {
+    display: flex;
+
+    .top-left {
+      flex: 5;
+      padding: 0 7.5rem;
+
+      h1 {
+        font-size: 7.5rem;
+        font-weight: 400;
+        margin-bottom: 2rem;
+      }
+    }
+
+    .top-right {
+      flex: 3;
+      padding: 0 7.5rem;
+
+      img {
+        width: 35rem;
+        height: 35rem;
+        object-fit: contain;
+      }
+    }
+  }
+
+  .bottom {
+    display: flex;
+
+    .bottom-left {
+      flex: 3;
+      padding: 0 7.5rem;
+
+      h1 {
+        font-size: 6rem;
+        font-weight: 400;
+        margin-bottom: 2rem;
+        display: flex;
+        align-items: center;
+        i {
+          font-size: 4rem;
+          margin-right: 0.5rem;
+          color: var(--color-tertiary);
+        }
+      }
+    }
+    .bottom-right {
+      flex: 5;
+      padding: 0 7.5rem;
+
+      h3 {
+        font-size: 4rem;
+        font-weight: 400;
+      }
+    }
+  }
+
+  .strap-yellow {
+    background-color: var(--color-tertiary);
+    padding: 2rem 7.5rem;
+    color: var(--color-dark);
+    display: flex;
+
+    .left {
+      flex: 1;
+    }
+    .middle {
+      flex: 1;
+    }
+    .right {
+      flex: 1;
+    }
+  }
+
+  .strap-blue {
+    @include flexCenter;
+    padding: 2rem;
+    background-color: var(--color-primary);
+  }
+
+  .strap-purple {
+    background-color: var(--color-background);
+    padding: 5rem 7.5rem;
+    color: var(--color-light);
+    display: flex;
+
+    h1 {
+      margin-left: 5rem;
+      font-size: 6rem;
+      font-weight: 400;
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      i {
+        font-size: 4rem;
+        margin-right: 0.5rem;
+        color: var(--color-tertiary);
+      }
+    }
+
+    .content {
+      flex: 2;
+      margin-left: 10rem;
+      margin-right: 5rem;
+    }
+  }
+
+  .phase2 {
+    padding: 5rem 7.5rem;
+    position: relative;
+    // min-height: 100vh;
+    padding-right: 60rem;
+    .phase2-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+    .left {
+      h1 {
+        font-size: 6rem;
+        font-weight: 400;
+        margin-bottom: 2rem;
+        display: flex;
+        align-items: center;
+        i {
+          font-size: 4rem;
+          margin-right: 0.5rem;
+          color: var(--color-tertiary);
+        }
+      }
+
+      h3 {
+        font-size: 4rem;
+        font-weight: 400;
+      }
+
+      .list {
+        display: flex;
+        align-items: flex-start;
+
+        i {
+          margin-right: 1rem;
+          margin-top: 0.5rem;
+        }
+      }
+    }
+  }
+
+  .phase3 {
+    padding: 5rem 0;
+    position: relative;
+    min-height: 60vh;
+    background-color: #001f7c;
+
+    .phase3-img {
+      position: absolute;
+      left: -20rem;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+
+    .content-wrapper {
+      position: relative;
+      min-height: 60vh;
+      h3 {
+        font-size: 4rem;
+        font-weight: 400;
+      }
+      .right {
+        @include absCenter;
+        left: 75%;
+        right: 0;
+      }
+    }
+  }
+}
+
+@include respond(phone) {
+  .roadmap {
+    .top {
+      flex-direction: column;
+      margin-bottom: 5rem;
+
+      .top-left {
+        flex: 1;
+        @include flexCenter;
+        padding: 0 5rem;
+        margin-bottom: 3rem;
+      }
+      .top-right {
+        flex: 1;
+        @include flexCenter;
+        padding: 0 5rem;
+      }
+    }
+
+    .bottom {
+      flex-direction: column;
+
+      .bottom-left {
+        flex: 1;
+        @include flexCenter;
+        padding: 0 5rem;
+        margin-bottom: 3rem;
+      }
+      .bottom-right {
+        flex: 1;
+        @include flexCenter;
+        padding: 0 5rem;
+      }
+    }
+
+    .strap-yellow {
+      flex-direction: column;
+
+      .left {
+        margin-bottom: 1rem;
+      }
+      .middle {
+        margin-bottom: 1rem;
+      }
+    }
+    .strap-purple {
+      flex-direction: column;
+      h1 {
+        margin: 0;
+        margin-bottom: 1rem;
+      }
+      .content {
+        margin: 0;
+      }
+    }
+
+    .phase2 {
+      padding-right: 7.5rem;
+    }
+
+    .phase3 {
+      padding: 5rem 7.5rem;
+      min-height: fit-content;
+      .phase3-img {
+        display: none;
+      }
+
+      .content-wrapper {
+        min-height: fit-content;
+        .right {
+          position: relative;
+          transform: translate(0, 0);
+          left: 0;
+          top: 0;
+          bottom: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.tooltip-primary {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+
+  .tooltip {
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    background-color: var(--color-light);
+    color: var(--color-dark);
+    box-shadow: var(--shadow-dark);
+    position: absolute;
+    top: 50%;
+    left: 105%;
+    transform: translateY(-50%);
+    white-space: nowrap;
+    visibility: hidden;
+    opacity: 0;
+    box-shadow: var(--shadow-primary-dark);
+
+    p {
+      font-size: 1rem;
+    }
+  }
+
+  .children:hover ~ .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+}

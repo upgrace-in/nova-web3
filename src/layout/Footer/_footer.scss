@@ -1,0 +1,129 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 5rem;
+  background-color: var(--color-secondary);
+  display: flex;
+  align-items: center;
+
+  .left {
+    flex: 1;
+    height: 100%;
+
+    .bars {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+
+      .stats {
+        padding: 0.5rem;
+        background-color: var(--color-dark);
+
+        height: fit-content;
+
+        p {
+          font-size: 1rem;
+          font-family: $font-tertiary;
+          font-weight: bold;
+        }
+      }
+
+      .categories {
+        display: flex;
+        width: calc(100% - 25rem);
+        padding-right: 20rem;
+        background-color: #b9ff74;
+        .category {
+          flex: 1;
+          padding: 0.25rem;
+          @include flexCenter;
+        }
+
+        .black {
+          background-color: #000000;
+        }
+        .blue {
+          background-color: #1c9ef6;
+        }
+        .yellow {
+          background-color: #fdf53b;
+        }
+        .pink {
+          background-color: #f707f0;
+        }
+        .orange {
+          background-color: #ee9c48;
+        }
+        .green {
+          background-color: #b9ff74;
+          //   flex: 2;
+          //   align-items: flex-start;
+          //   padding-left: 6rem;
+        }
+      }
+    }
+  }
+  .right {
+    width: 50rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    clip-path: polygon(40% 0, 100% 0, 100% 100%, 0% 100%);
+    background-color: var(--color-secondary);
+    height: 100%;
+
+    i {
+      font-size: 2rem;
+      width: 2rem;
+      height: 2rem;
+      margin-right: 3rem;
+      cursor: pointer;
+
+      &:last-child {
+        margin-right: 7.5rem;
+      }
+    }
+
+    .icon {
+      cursor: pointer;
+      width: 2rem;
+      height: 2rem;
+      position: relative;
+      margin-right: 3rem;
+    }
+  }
+}
+
+@include respond(phone) {
+  .footer {
+    .left {
+      // display: none;
+      position: absolute;
+      bottom: 5rem;
+      left: 0;
+      right: 0;
+      top: unset;
+
+      .bars {
+        .categories {
+          width: 100%;
+          padding-right: 0;
+        }
+      }
+    }
+
+    .right {
+      justify-content: center;
+      clip-path: unset;
+
+      i {
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
