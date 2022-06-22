@@ -55,6 +55,7 @@ function check_if_connected() {
             selectedAccount = tx[0]
             $('.connect_btn > p').html(truncateString(String(selectedAccount), 10));
             $('#mint_box').show();
+            alert("Wallet Connected !!!")
             if (window.ethereum.networkVersion == chainId) {
                 // One TIME
                 if (startup == false) {
@@ -64,21 +65,23 @@ function check_if_connected() {
                         await trigger_minting(parseFloat(mint_count) * parseFloat(mint_costs));
                     });
 
+                    alert("Click build")
+
                     // total supply
-                    await contract.methods.totalSupply().call().then(function (res, err) {
-                        if (res) {
-                            $('#total_supply').html(res +" /7750")
-                        }
-                    });
+                    // await contract.methods.totalSupply().call().then(function (res, err) {
+                    //     if (res) {
+                    //         $('#total_supply').html(res +" /7750")
+                    //     }
+                    // });
 
                     // cost
-                    await contract.methods.cost().call().then(function (res, err) {
-                        if (res) {
-                            mint_costs = web3.utils.fromWei(res, 'ether')
-                            $('#mint_costs').html(mint_costs);
-                            set_value('increase')
-                        }
-                    });
+                    // await contract.methods.cost().call().then(function (res, err) {
+                    //     if (res) {
+                    //         mint_costs = web3.utils.fromWei(res, 'ether')
+                    //         $('#mint_costs').html(mint_costs);
+                    //         set_value('increase')
+                    //     }
+                    // });
                 }
             } else {
                 alert("Connect to Rinkeby")
