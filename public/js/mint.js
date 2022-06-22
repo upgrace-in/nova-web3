@@ -127,11 +127,6 @@ $(document).ready(() => {
         await connectWeb3();
     })
 
-
-    $('#mint_btn').click(() => {
-        check_if_connected()
-    })
-
     $('#increase_btn').click(() => {
         set_value('increase');
     })
