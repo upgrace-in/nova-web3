@@ -71,8 +71,30 @@ export default function Home() {
       <div className="actions">
         <div className="btn">
           <i className="fa-solid fa-star"></i>
-          <p>JOIN THE TEAM</p>
+          <p className="text-center">JOIN THE TEAM</p>
         </div>
+        <div className="connect_btn btn btn2">
+          <p className="text-center">Connect Wallet</p>
+        </div>
+
+        <div id="mint_box" style={{display:'none'}}>
+          <div className="row" style={{ display: 'flex' }}>
+            <div id="decrease_btn" className="btn btn3">
+              <p className="text-center">-</p>
+            </div>
+            <div className="btn btn3">
+              <p id="mint_count" className="text-center">1</p>
+            </div>
+            <div id="increase_btn" className="btn btn3">
+              <p className="text-center">+</p>
+            </div>
+          </div>
+          <div id="mint_btn" className="btn btn2">
+            <p className="text-center">Mint</p>
+          </div>
+        </div>
+
+
       </div>
       {/* <Footer /> */}
     </div>
