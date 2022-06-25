@@ -1,15 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 const Stadium = () => {
-  const [screenMob, setscreenMob] = useState(null);
-
-  useEffect(() => {
-    typeof window !== "undefined" && window.screen.width < 640 ? setscreenMob(true) : setscreenMob(false);
-  }, []);
 
   return (
     <div className="stadium">
-      <img src={!screenMob ? "/media/images/stadium.jpg" : "/media/images/stadium-mob.jpg"} alt="stadium" />
+      <img id="stadium_pc" src="/media/images/stadium.jpg" alt="stadium" />
+      <img id="stadium_mob" style={{display:'none'}} src="/media/images/stadium-mob.jpg" alt="stadium" />
       <div className="content">
         <h1>STADIUM</h1>
 
@@ -28,11 +24,7 @@ const Stadium = () => {
           data-modal-standings="true"
           data-modal-show-logos="true">
         </div>
-        <script 
-          type="module" 
-          src="https://widgets.api-sports.io/2.0.3/widgets.js">
-        </script>
-
+        <script type="module" src="https://widgets.api-sports.io/2.0.3/widgets.js"/>
       </div>
     </div>
   );
