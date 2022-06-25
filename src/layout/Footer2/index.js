@@ -1,14 +1,7 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
-import { useDispatch } from "react-redux";
-import { getCollection, getScore } from "../../redux/actions/score";
 
 export default function Footer2() {
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(getScore());
-    dispatch(getCollection());
-  }, []);
 
   return (
     <div className="footer-2">
