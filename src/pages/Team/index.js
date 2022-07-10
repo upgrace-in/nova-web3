@@ -26,7 +26,7 @@ const Team = () => {
         <h1>The Goose with</h1>
         <h1>the golden eggs</h1>
       </div>
-    </div>
+    </div >
   );
 };
 

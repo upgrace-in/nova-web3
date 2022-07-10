@@ -36,7 +36,7 @@
 
 @include respond(phone) {
   .projects {
-    background-color: #000026;
+    background: url("/mobile/projects.jpg") center !important;
     img {
       display: none;
     }

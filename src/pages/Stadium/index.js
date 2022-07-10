@@ -16,13 +16,15 @@ const Stadium = () => {
           data-league=""
           data-season=""
           data-theme="dark"
-          data-refresh="0"
+          data-refresh="15"
           data-show-toolbar="true"
           data-show-errors="false"
           data-show-logos="false"
           data-modal-game="true"
           data-modal-standings="true"
-          data-modal-show-logos="true">
+          data-modal-show-logos="true"
+          style={{overflow: 'auto', height: '200px'}}
+          >
         </div>
         <script type="module" src="https://widgets.api-sports.io/2.0.3/widgets.js"/>
       </div>

@@ -54,7 +54,7 @@
 
 @include respond(phone) {
   .team {
-    background-color: #000026;
+    background: url("/mobile/team.jpg") center !important;
     img {
       display: none;
     }
