@@ -4,7 +4,7 @@ import Footer from "../../layout/Footer";
 import Script from 'next/script';
 
 export default function Home() {
-  const [timer, settimer] = useState(100);
+  const [timer, settimer] = useState(5733243);
 
   useEffect(() => {
     const interval = setInterval(() => {

@@ -63,9 +63,9 @@ export default function Roadmap() {
           <h1>&apos;WE COME IN PEACE&apos;:</h1>
         </div>
         <div className="middle">
-          <h3>MINT DATE: JULY 31, 2022</h3>
+          <h3>MINT DATE: SEPTEMBER 16, 2022</h3>
           <h3>MINT PRICE: 0.03 ETH</h3>
-          <h3>PUBLIC SALE: AUGUST 02, 2022</h3>
+          <h3>PUBLIC SALE: SEPTEMBER 18, 2022</h3>
           <h3>AFTER MINT: 0.05 ETH</h3>
         </div>
         <div className="right">
