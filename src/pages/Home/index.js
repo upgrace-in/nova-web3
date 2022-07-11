@@ -69,14 +69,14 @@ export default function Home() {
         </div>
       </div>
       <div className="actions">
-        <div className="btn">
+        {/* <div className="btn">
           <i className="fa-solid fa-star"></i>
           <p className="text-center">JOIN THE TEAM</p>
-        </div>
+        </div> */}
         <div className="btn" onClick={() => { window.open("https://youtu.be/lABRnbugKfM") }}>
           <p className="text-center">Watch The Video</p>
         </div>
-        <div id="connect_btn" className="connect_btn btn btn2">
+        <div id="cownnect_btn" className="connect_btn btn btn2">
           <p className="text-center">Connect Wallet</p>
         </div>
 

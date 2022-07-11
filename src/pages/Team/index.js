@@ -14,16 +14,15 @@ const Team = () => {
 
           <div id="teamNames" style={{display: "none"}}>
             <br />
-            <br />
+            <p>Andres Navia, AKA:</p>
+            <h2>The Goose with</h2>
+            <h2>the golden eggs</h2>
+            <br/>
             <p>William Cordoba, AKA:</p>
             <h2>Bilomasflow</h2>
             <br />
             <p>J. Gaviria, AKA:</p>
             <h2>Ayahuasca trip</h2>
-            <br />
-            <p>Andres Navia, AKA:</p>
-            <h2>The Goose with</h2>
-            <h2>the golden eggs</h2>
           </div>
         </p>
       </div>
