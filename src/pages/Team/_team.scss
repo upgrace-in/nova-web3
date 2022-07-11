@@ -1,7 +1,8 @@
 .team {
   position: relative;
-  min-height: 100vh;
+  min-height: 140vh;
   background-color: var(--color-primary);
+
   img {
     position: absolute;
     right: 0;
@@ -30,7 +31,7 @@
 
     p {
       font-family: $font-tertiary;
-      font-size: 1.3rem;
+      font-size: 2rem;
       // margin-left: 5rem;
     }
   }
@@ -40,11 +41,13 @@
     top: 11rem;
     right: 20%;
   }
+
   .name2 {
     position: absolute;
     top: 11rem;
     right: 6%;
   }
+
   .name3 {
     position: absolute;
     bottom: 11rem;
@@ -55,11 +58,22 @@
 @include respond(phone) {
   .team {
     background: url("/mobile/team.jpg") center !important;
+
     img {
       display: none;
     }
+
     .content {
       right: 7.5rem;
     }
+  }
+}
+
+@media(max-width: 780px) {
+  #teamNames {
+    display: block !important;
+  }
+  .team .content{
+    top: 45%;
   }
 }

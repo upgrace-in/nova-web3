@@ -1,6 +1,6 @@
 .season {
   position: relative;
-  min-height: 100vh;
+  min-height: 150vh;
   img {
     position: absolute;
     inset: 0;
@@ -32,7 +32,7 @@
 
     p {
       font-family: $font-tertiary;
-      font-size: 1.3rem;
+      font-size: 2rem;
     }
   }
 }

@@ -11,6 +11,20 @@ const Team = () => {
           who´s on top. You will be able to see as the Team fills with NFANs as we are downloaded to our avatars. Once
           the telepathic sensory translation (or minting) starts we will be visible to you with 7-dimensional technology
           and metaverse quantum mechanics.
+
+          <div id="teamNames" style={{display: "none"}}>
+            <br />
+            <br />
+            <p>William Cordoba, AKA:</p>
+            <h2>Bilomasflow</h2>
+            <br />
+            <p>J. Gaviria, AKA:</p>
+            <h2>Ayahuasca trip</h2>
+            <br />
+            <p>Andres Navia, AKA:</p>
+            <h2>The Goose with</h2>
+            <h2>the golden eggs</h2>
+          </div>
         </p>
       </div>
       <div className="name1 hd-mb">

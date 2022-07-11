@@ -4,7 +4,7 @@ import Footer from "../../layout/Footer";
 import Script from 'next/script';
 
 export default function Home() {
-  const [timer, settimer] = useState(10000000);
+  const [timer, settimer] = useState(100);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -73,11 +73,14 @@ export default function Home() {
           <i className="fa-solid fa-star"></i>
           <p className="text-center">JOIN THE TEAM</p>
         </div>
+        <div className="btn" onClick={() => { window.open("https://youtu.be/lABRnbugKfM") }}>
+          <p className="text-center">Watch The Video</p>
+        </div>
         <div id="connect_btn" className="connect_btn btn btn2">
           <p className="text-center">Connect Wallet</p>
         </div>
 
-        <div id="mint_box" style={{display:'none'}}>
+        <div id="mint_box" style={{ display: 'none' }}>
           <div className="row" style={{ display: 'flex' }}>
             <div id="decrease_btn" className="btn btn3">
               <p className="text-center">-</p>

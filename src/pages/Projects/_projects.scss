@@ -1,6 +1,7 @@
 .projects {
   position: relative;
   min-height: 100vh;
+
   img {
     position: absolute;
     inset: 0;
@@ -28,8 +29,8 @@
 
     p {
       font-family: $font-tertiary;
-      font-size: 1.3rem;
-      margin-left: 5rem;
+      font-size: 2rem;
+      // margin-left: 5rem;
     }
   }
 }
@@ -37,11 +38,17 @@
 @include respond(phone) {
   .projects {
     background: url("/mobile/projects.jpg") center !important;
+
     img {
       display: none;
     }
+
     .content {
       left: 5%;
+      background: #00000099;
+      margin-top: 1%;
+      padding: 10px;
+      border-radius: 5px;
     }
   }
 }
