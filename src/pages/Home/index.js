@@ -2,9 +2,18 @@ import React, { useEffect, useState } from "react";
 import { secondsToDhms } from "../../functions/conversion";
 import Footer from "../../layout/Footer";
 import Script from 'next/script';
+import HomeFrame from './HomeFrame'
+import Head from 'next/head'
 
 export default function Home() {
   const [timer, settimer] = useState(5733243);
+
+  const [showDiv, setshowDiv] = useState(false)
+
+  function closeThis() {
+    console.log(showDiv)
+    setshowDiv(old => !old)
+  }
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -42,6 +51,9 @@ export default function Home() {
         strategy="lazyOnload"
         onLoad={() => console.log("main.js is Loaded...")}
       />
+      <Head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.1/css/all.min.css" integrity="sha512-ioRJH7yXnyX+7fXTQEKPULWkMn3CqMcapK0NNtCN8q//sW7ZeVFcbMJ9RvX99TwDg6P8rAH2IqUSt2TLab4Xmw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      </Head>
       <img className="graphics" src="/media/images/graphics1.png" alt="graphics" />
       <div className="band">
         <h1>A NEW WAY OF EXPERIENCING SPORTS, ESPORTS AND GAMING</h1>
@@ -73,7 +85,7 @@ export default function Home() {
           <i className="fa-solid fa-star"></i>
           <p className="text-center">JOIN THE TEAM</p>
         </div> */}
-        <div className="btn" onClick={() => { window.open("https://youtu.be/lABRnbugKfM") }}>
+        <div className="btn" onClick={() => closeThis()}>
           <p className="text-center">Watch The Video</p>
         </div>
         <div id="cownnect_btn" className="connect_btn btn btn2">
@@ -97,6 +109,7 @@ export default function Home() {
           </div>
         </div>
 
+        <HomeFrame handleClick={() => closeThis} showDiv={showDiv} />
 
       </div>
       {/* <Footer /> */}

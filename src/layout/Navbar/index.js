@@ -92,12 +92,6 @@ const Navbar = () => {
                   <p className="menu">ROADMAP</p>
                 </a>
               </Link>
-              <Link href="/iframe" passHref>
-                <a className="item">
-                  <i className="fa-solid fa-arrow-right-long"></i>
-                  <p className="menu">Iframe</p>
-                </a>
-              </Link>
             </div>
           </div>
         </div>

@@ -1,3 +1,30 @@
+#frameCon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#frameCon > iframe{
+  width: 967px !important;
+}
+
+#closeCon{
+  position: absolute;
+  padding: 2px 10px 2px 10px;
+  font-size: 2.8rem;
+  right: 0;
+  background-color: black;
+  cursor: pointer;
+}
+
+@media (max-width: 780px) {
+  #frameCon > iframe{
+    width: auto !important;
+  }
+}
+
+
 .home {
   height: 100vh;
   padding-top: 10rem;
@@ -22,11 +49,12 @@
     height: 6rem;
     @include flexCenter;
     margin-bottom: 5rem;
+
     h1 {
       font-size: 4rem;
       font-style: italic;
       letter-spacing: 0.1rem;
-      font-family: $font-secondary;
+      // font-family: $font-secondary;
     }
   }
 
@@ -37,28 +65,30 @@
 
     .time {
       text-align: center;
+
       h1 {
         font-size: 8.5rem;
         font-style: italic;
         letter-spacing: 0.1rem;
-        font-family: $font-secondary;
+        // font-family: $font-secondary;
       }
+
       &:not(:last-child) {
         margin-right: 5rem;
       }
     }
   }
 
-  .btn{
+  .btn {
     margin: 10px;
   }
 
-  .text-center{
+  .text-center {
     margin-right: auto;
     margin-left: auto;
   }
-  
-  .btn3{
+
+  .btn3 {
     margin: 0px 10px 0px 10px;
   }
 
@@ -80,6 +110,7 @@
         margin-right: 1rem;
         color: var(--color-tertiary);
       }
+
       p {
         font-size: 1.5rem;
       }
