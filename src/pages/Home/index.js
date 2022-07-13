@@ -56,7 +56,8 @@ export default function Home() {
       </Head>
       <img className="graphics" src="/media/images/graphics1.png" alt="graphics" />
       <div className="band">
-        <h1>A NEW WAY OF EXPERIENCING SPORTS, ESPORTS AND GAMING</h1>
+        <h1 className="home_txt_hide">A NEW WAY OF EXPERIENCING SPORTS, ESPORTS AND GAMING</h1>
+        <h1 className="home_txt" style={{ display: 'none', textAlign: 'center' }}>A NEW WAY OF EXPERIENCING SPORTS,<br /> ESPORTS AND GAMING</h1>
       </div>
       <div className="timer">
         {/* <div className="time">
