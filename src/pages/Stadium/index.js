@@ -1,36 +1,19 @@
-import React, { useEffect } from "react";
-import Script from 'next/script'
+import React from "react";
+import Head from 'next/head';
+
 
 const Stadium = () => {
 
   return (
     <div className="stadium">
+      {/* 6N6V6MLlVC2Bd7oe1wZKVgaYOXsFxGwxJ4pQ9W6CuXIY3UmS8JGvRynqzJvS */}
+      
 
       <img id="stadium_pc" src="/media/images/stadium.jpg" alt="stadium" />
       <img id="stadium_mob" style={{ display: 'none' }} src="/media/images/stadium-mob.jpg" alt="stadium" />
       <div className="content">
         <h1 className="head_2">STADIUM</h1>
-        <div className="widget_football">
-          <div id="wg-api-football-games"
-            data-host="v3.football.api-sports.io"
-            data-key="c9f354620f2d6a831ea11cc8a32cde4c"
-            data-date=""
-            data-league=""
-            data-season=""
-            data-theme=""
-            data-refresh="15"
-            data-show-toolbar="true"
-            data-show-errors="false"
-            data-show-logos="false"
-            data-modal-game="true"
-            data-modal-standings="true"
-            data-modal-show-logos="true">
-          </div>
-        </div>
-        <script
-          type="module"
-          src="https://widgets.api-sports.io/2.0.3/widgets.js">
-        </script>
+        <iframe id="footballFrame" src="/index.html" title="W3Schools Free Online Web Tutorials"></iframe>
       </div>
     </div>
   );

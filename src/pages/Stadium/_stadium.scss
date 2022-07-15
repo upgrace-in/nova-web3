@@ -1,6 +1,7 @@
 .stadium {
   position: relative;
   min-height: 100vh;
+
   img {
     position: absolute;
     inset: 0;
@@ -61,6 +62,7 @@
         flex-wrap: nowrap;
         white-space: nowrap;
         @include hideScrollbar;
+
         .category {
           padding: 0.25rem;
           @include flexCenter;
@@ -96,10 +98,12 @@
 
 @include respond(phone) {
   .stadium {
+
     // background-color: #000026;
     img {
       // display: none;
     }
+
     .content {
       left: 5%;
       // top: 45%;
@@ -114,11 +118,9 @@
   }
 }
 
-#wg-api-football-games{
-  height: 200px;
-  overflow: auto;
-}
-
-.head_2{
-  color: black !important;
+#footballFrame {
+  height: 200px !important;
+  width: 100% !important;
+  outline: none !important;
+  border: none !important;
 }
