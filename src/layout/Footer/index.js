@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import Image from "next/image";
+// import Image from "next/image";
 
 export default function Footer() {
 
@@ -26,7 +26,7 @@ export default function Footer() {
       <div className="right">
         <i className="fa-brands fa-discord"></i>
         <div className="icon">
-          <Image src="/media/images/opensea.png" alt="opensea" layout="fill" objectFit="contain" />
+          {/* <Image src="/media/images/opensea.png" alt="opensea" layout="fill" objectFit="contain" /> */}
         </div>
         <i className="fa-brands fa-twitter"></i>
         <i className="fa-brands fa-instagram"></i>

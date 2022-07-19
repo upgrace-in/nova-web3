@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
-import Image from "next/image";
 
 const Navbar = () => {
   const { pathname, push } = useRouter();

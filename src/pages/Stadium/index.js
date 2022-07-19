@@ -13,7 +13,7 @@ const Stadium = () => {
       <img id="stadium_mob" style={{ display: 'none' }} src="/media/images/stadium-mob.jpg" alt="stadium" />
       <div className="content">
         <h1 className="head_2">STADIUM</h1>
-        <iframe id="footballFrame" src="/index.html" title="W3Schools Free Online Web Tutorials"></iframe>
+        <iframe id="footballFrame" src="/football.html" title="W3Schools Free Online Web Tutorials"></iframe>
       </div>
     </div>
   );
