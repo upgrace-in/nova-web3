@@ -6,7 +6,6 @@ import HomeFrame from './HomeFrame'
 import Head from 'next/head'
 
 export default function Home() {
-  const [timer, settimer] = useState(5733243);
 
   const [showDiv, setshowDiv] = useState(false)
 
@@ -14,31 +13,6 @@ export default function Home() {
     console.log(showDiv)
     setshowDiv(old => !old)
   }
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      settimer(timer - 1);
-    }, 1000);
-
-    return () => clearInterval(interval);
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [timer]);
-
-  useEffect(() => {
-    var countDownDate = new Date("Sep 16, 2022 00:00:00").getTime();
-    var now = new Date().getTime();
-    var distance = countDownDate - now
-
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    settimer((days*86400)+(hours*3600)+(minutes*60)+seconds);
-  }, [])
-
-  console.log(secondsToDhms(timer));
 
   return (
     <div className="home">
@@ -72,37 +46,12 @@ export default function Home() {
         <h1 className="home_txt_hide">A NEW WAY OF EXPERIENCING SPORTS, ESPORTS AND GAMING</h1>
         <h1 className="home_txt" style={{ display: 'none', textAlign: 'center' }}>A NEW WAY OF EXPERIENCING SPORTS,<br /> ESPORTS AND GAMING</h1>
       </div>
-      <div className="timer">
-        {/* <div className="time">
-          <h1>01</h1>
-          <p>MONTHS</p>
-        </div> */}
-        <div className="time">
-          <h1>{secondsToDhms(timer).dDisplay}</h1>
-          <p>{secondsToDhms(timer).dText}</p>
-        </div>
-        <div className="time">
-          <h1>{secondsToDhms(timer).hDisplay}</h1>
-          <p>{secondsToDhms(timer).hText}</p>
-        </div>
-        <div className="time">
-          <h1>{secondsToDhms(timer).mDisplay}</h1>
-          <p>{secondsToDhms(timer).mText}</p>
-        </div>
-        <div className="time">
-          <h1>{secondsToDhms(timer).sDisplay}</h1>
-          <p>{secondsToDhms(timer).sText}</p>
-        </div>
-      </div>
+      
       <div className="actions">
-        {/* <div className="btn">
-          <i className="fa-solid fa-star"></i>
-          <p className="text-center">JOIN THE TEAM</p>
-        </div> */}
         <div className="btn" onClick={() => closeThis()}>
           <p className="text-center">Watch The Video</p>
         </div>
-        <div id="cownnect_btn" className="connect_btn btn btn2">
+        <div id="connect_btn" className="connect_btn btn btn2">
           <p className="text-center">Connect Wallet</p>
         </div>
 
